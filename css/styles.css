@@ -193,7 +193,6 @@ body {
   color: rgba(0, 0, 0, 0.7);
   font-size: 0.75rem;
   padding-top: 1rem;
-  /* padding: 1.5rem 1rem; */
 }
 
 .bread-crumbs__link:first-child {
@@ -223,18 +222,6 @@ body {
   }
 }
 
-@media (min-width: 64rem) {
-  .bread-crumbs {
-    /* padding-left: 2rem; */
-  }
-}
-
-@media (min-width: 90rem) {
-  .bread-crumbs {
-    /* padding-left: 7.87rem; */
-  }
-}
-
 .main__title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -247,20 +234,6 @@ body {
     line-height: 2.5rem;
     font-size: 2rem;
     margin-top: 2rem;
-  }
-}
-
-@media (min-width: 48rem) {
-  .main__title {
-    line-height: 3.5rem;
-    font-size: 3rem;
-    margin-top: 2.5rem;
-  }
-}
-
-@media (min-width: 90rem) {
-  .main__title {
-    margin-top: 1.87rem;
   }
 }
 
@@ -280,19 +253,6 @@ body {
   }
 }
 
-@media (min-width: 48rem) {
-  .main__filters {
-    margin-bottom: 1.5rem;
-    white-space: wrap;
-  }
-}
-
-@media (min-width: 64rem) {
-  .main__filters {
-    margin-top: 2rem;
-  }
-}
-
 .main__filters::-webkit-scrollbar {
   display: none;
 }
@@ -302,12 +262,6 @@ body {
   margin: 0 5px 0 0;
   user-select: none;
   position: relative;
-}
-
-@media (min-width: 48rem) {
-  .main__filters_checkbox-button {
-    margin-bottom: 0.5rem;
-  }
 }
 
 .main__filters_checkbox-button input[type='checkbox'] {
@@ -366,9 +320,11 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .main__posts_post {
+  background-color: white;
   border: 1px solid #c1c5cd;
   border-top: none;
   border-radius: 1rem;
@@ -378,14 +334,30 @@ body {
   position: relative;
 }
 
+@media (min-width: 25.85rem) {
+  .main__posts_post {
+    height: 29.125rem;
+  }
+}
+
 .main__posts_post-content {
   padding: 1rem;
+}
+
+@media (min-width: 25.85rem) {
+  .main__posts_post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16rem;
+  }
 }
 
 .main__posts_post-image {
   border-radius: 1rem 1rem 0px 0px;
   height: 12.875rem;
-  width: 18rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 .main__posts_post-title {
@@ -426,4 +398,118 @@ body {
   font-weight: 600;
   line-height: 1.25rem;
   margin-bottom: 0.5rem;
+}
+
+.desktop-post {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .main__posts {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main__title {
+    line-height: 3.5rem;
+    font-size: 3rem;
+    margin-top: 2.5rem;
+  }
+
+  .main__filters {
+    margin-bottom: 1.5rem;
+    white-space: wrap;
+  }
+
+  .main__filters_checkbox-button {
+    margin-bottom: 0.5rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) {
+    height: 37.25rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) .main__posts_post-content {
+    height: 12.25rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) .main__posts_post-image {
+    height: 25.25rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) {
+    gap: 1.5rem;
+    height: 29rem;
+    width: 22rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) .main__posts_post-image {
+    height: 12.875rem;
+    width: 22rem;
+  }
+
+  .desktop-post {
+    display: block;
+  }
+}
+
+@media (min-width: 64rem) {
+  .main__filters {
+    margin-top: 2rem;
+  }
+
+  .main__posts {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .main__posts_post {
+    width: 19rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) {
+    height: 29rem;
+    width: 29.25rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) {
+    width: 19rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) .main__posts_post-image {
+    height: 16.25rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) .main__posts_post-title {
+    width: 17rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .wrapper {
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-position: 0% 30%;
+  }
+
+  .main__title {
+    margin-top: 1.87rem;
+  }
+
+  .main__posts_post:nth-child(-n + 2) {
+    width: 36.75rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) {
+    width: 24rem;
+  }
+
+  .main__posts_post:not(:nth-child(-n + 2)) .main__posts_post-image {
+    width: 100%;
+  }
+
+  .main__posts_post-filters {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
 }
