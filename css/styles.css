@@ -219,7 +219,6 @@ body {
 @media (min-width: 25.88rem) {
   .bread-crumbs {
     padding-top: 1.25rem;
-    /* padding: 1rem 1.25rem; */
   }
 }
 
@@ -322,6 +321,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .main__posts_post {
@@ -330,15 +330,7 @@ body {
   border-top: none;
   border-radius: 1rem;
   display: block;
-  height: 29.875rem;
-  margin-bottom: 1rem;
   position: relative;
-}
-
-@media (min-width: 25.85rem) {
-  .main__posts_post {
-    height: 29.125rem;
-  }
 }
 
 .main__posts_post-content {
@@ -411,8 +403,123 @@ body {
   color: white;
   font-weight: 700;
   line-height: 1.5rem;
-  margin: 0 auto;
+  margin: 1rem auto 3.7rem auto;
   padding: 0.75rem 4.5rem;
+}
+
+.footer {
+  background-color: #2963a3;
+  color: white;
+  padding: 2.19rem 0.88rem 2.31rem 1.125rem;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  height: 11.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__menu_item-link {
+  color: white;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+.footer__newsletter {
+  line-height: 1.625rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 1.4375rem 0 0.5rem;
+}
+
+.footer__input {
+  border: 0.0625rem solid #9d9d9d;
+  border-radius: 0.25rem;
+  padding: 0.875rem 3.25rem 0.875rem 1rem;
+  width: 100%;
+}
+
+.footer__input::placeholder {
+  color: #9d9d9d;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.footer__agreement {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  margin: 0.75rem 0 0.3125rem 0;
+}
+
+.footer__membership {
+  display: flex;
+  flex-direction: row;
+  gap: 0.51rem;
+}
+
+.footer__membership:first-child {
+  margin-left: 0.51rem;
+}
+
+.footer__contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 1.25rem;
+}
+
+.footer__other_info {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  position: relative;
+  margin-top: 2.625rem;
+}
+
+.footer__other_info::before {
+  content: ' ';
+  background: #9d9d9d;
+  width: 100%;
+  height: 0.01rem;
+  top: -1.3rem;
+  position: absolute;
+}
+
+.footer__input_button {
+  display: none;
+}
+
+@media (min-width: 25.85rem) {
+  .footer__newsletter {
+    height: 3.25rem;
+  }
+
+  .footer__input_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .footer__input_button {
+    background-color: #16c8bb;
+    display: block;
+    padding: 0.8rem 0.7rem 0.8rem 1.437rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    right: 0;
+    top: 5.17rem;
+  }
+
+  .footer__contacts {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .footer__input_button {
+    top: 0;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -461,6 +568,66 @@ body {
   .desktop-post {
     display: block;
   }
+
+  .main__posts_more-button {
+    margin-bottom: 3.4rem;
+  }
+
+  .footer__newsletter {
+    margin-top: 0;
+    width: 23rem;
+  }
+
+  .footer__nav_container {
+    display: flex;
+    gap: 1.9rem;
+  }
+
+  .footer__input_container {
+    width: 28.125rem;
+  }
+
+  .footer__input {
+    width: 25.25rem;
+  }
+
+  .footer__input_button {
+    top: 3.75rem;
+    right: 2.7rem;
+  }
+
+  .footer__membership {
+    margin-top: 1.625rem;
+  }
+
+  .footer__contacts {
+    grid-template-columns: 1fr 1fr 1fr 1fr 10fr;
+  }
+
+  .footer__other_info {
+    grid-template-columns: 2.5fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .footer__menu {
+    width: 15.4rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer__contacts {
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 2.5rem;
+  }
+
+  .footer__other_info {
+    grid-template-columns: 2fr repeat(2, 2.5fr) 3fr;
+    width: 100%;
+  }
 }
 
 @media (min-width: 64rem) {
@@ -493,6 +660,10 @@ body {
   .main__posts_post:not(:nth-child(-n + 2)) .main__posts_post-title {
     width: 17rem;
   }
+
+  .footer {
+    padding: 2.5rem 1.625rem 1.0625rem 1.75rem;
+  }
 }
 
 @media (min-width: 90rem) {
@@ -522,5 +693,26 @@ body {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
+  }
+
+  .main__posts_more-button {
+    margin-top: 2.5rem;
+    margin-bottom: 6rem;
+  }
+
+  .footer {
+    padding: 2.5rem 7.5rem 1.0625rem 7.5rem;
+  }
+
+  .footer__menu {
+    width: 24.4rem;
+  }
+
+  .footer__labels {
+    margin-left: 6rem;
+  }
+
+  .footer__other_info {
+    grid-template-columns: 1.7fr 2fr 2fr 4fr;
   }
 }
