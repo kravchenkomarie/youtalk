@@ -24,6 +24,10 @@ li {
   list-style: none;
 }
 
+q {
+  quotes: none;
+}
+
 h1,
 h2,
 h3,
@@ -200,8 +204,9 @@ body {
   margin-right: 0.6rem;
   position: relative;
 }
-.bread-crumbs__link:nth-child(2) {
-  margin-left: 0.8rem;
+
+.bread-crumbs__link {
+  margin-left: 0.9rem;
 }
 
 .bread-crumbs__link:first-child::after {
@@ -214,6 +219,18 @@ body {
   position: absolute;
   left: 3.25rem;
   top: 0.15rem;
+}
+
+.bread-crumbs__link:nth-child(2)::after {
+  background: url('../images/arrow-right.svg');
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 8.7rem;
+  top: 8.1rem;
 }
 
 @media (min-width: 25.88rem) {
@@ -346,6 +363,10 @@ body {
   }
 }
 
+.main__posts_button-container {
+  width: 100%;
+}
+
 .main__posts_post-image {
   border-radius: 1rem 1rem 0px 0px;
   height: 12.875rem;
@@ -401,6 +422,7 @@ body {
   background-color: #35b3a9;
   border-radius: 0.25rem;
   color: white;
+  display: block;
   font-weight: 700;
   line-height: 1.5rem;
   margin: 1rem auto 3.7rem auto;
@@ -522,11 +544,339 @@ body {
   }
 }
 
+.section__post {
+  margin-top: 2rem;
+}
+
+.section__post_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.section__post_info {
+  display: flex;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.section__post_info p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.section__post_info-date::after,
+.section__post_info-date::before {
+  content: '•';
+  padding: 0 0.5rem;
+}
+
+.section__post_info-category {
+  color: #2963a3;
+}
+
+.section__post_image {
+  height: 10rem;
+  margin-bottom: 1rem;
+  width: 18rem;
+}
+
+.section__post_content {
+  margin-bottom: 1rem;
+}
+
+.section__post_content-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section__post_content-item {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0 0 0.5rem 2rem;
+  position: relative;
+}
+
+.section__post_content-item a {
+  text-decoration: underline;
+}
+
+.section__post_content-item::before {
+  content: '•';
+  color: #03b2a5;
+  font-size: 3rem;
+  position: absolute;
+  left: -1.7rem;
+  top: -0.3rem;
+}
+
+.section__post_article-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+
+.section__post_article-text p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.section__post_article-text-item {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section__post_quote {
+  display: block;
+  background-color: #f3f7fe;
+  background-image: url('../images/quotes.svg');
+  background-repeat: no-repeat;
+  background-position-y: 1rem;
+  background-position-x: 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: italic;
+  margin: 2.5rem 0 1rem 0;
+  padding: 1.625rem 1rem 1rem 1rem;
+}
+
+.section__post_quote p {
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 0.5rem;
+}
+
+.section__post_second-quote {
+  background-image: url('../images/quote-bg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: italic;
+  margin: 1.5rem 0 1rem 0;
+  text-align: center;
+}
+
+.section__post_second-image {
+  height: 10rem;
+  margin-bottom: 1rem;
+  width: 18rem;
+}
+
+.section__post_second-image-description {
+  color: #868686;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.section__post_third-image {
+  margin: 1rem 0;
+}
+
+.section__post_exercise {
+  background-color: #fefaec;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section__post_exercise p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.second-excercise {
+  background-color: #fff3eb;
+}
+
+.third-exercise {
+  background-color: rgb(3, 178, 165, 10%);
+}
+
+.section__post_chair-image,
+.section__post_girl-image {
+  height: 14.68rem;
+  margin-bottom: 0.5rem;
+}
+
+.section__post_image-container {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.section__post_separator-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.section__post_learn-more {
+  background-color: #e6f0fd;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__post_learn-more-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.learn-more-title {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.section__post__learn-more-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.section__post_learn-more-button {
+  background-color: #35b3a9;
+  padding: 0.75rem 0;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.section__post__psychologists {
+  border-radius: 1rem;
+  border: 0.0625rem solid #dedede;
+  padding: 1rem 1.18rem 2.1rem 1.18rem;
+}
+
+.section__post__psychologists_info {
+  text-align: center;
+}
+
+.section__post__psychologists-photo {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.section__post__psychologists_name {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.section__post__psychologists_profession {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.section__post__psychologists_about {
+  color: #a2a7b1;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  justify-content: center;
+}
+
+.section__post__psychologists_about p:first-child {
+  position: relative;
+  margin-right: 1.5rem;
+}
+
+.section__post__psychologists_about p:first-child::after {
+  content: '•';
+  color: #a2a7b1;
+  position: absolute;
+  font-size: 1rem;
+  position: absolute;
+  left: 5.2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.section__post__psychologists_title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 0.5rem 0;
+  position: relative;
+}
+
+.section__post__psychologists_title::before {
+  content: '';
+  background-color: #a2a7b1;
+  font-size: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 0.01rem;
+  bottom: 2.7rem;
+}
+
+.psychologists_skills {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.psychologists_button {
+  margin-top: 1.25rem;
+}
+
+.section__post_promo {
+  margin: 1.5rem 0;
+}
+
+.section__post_buy {
+  background-image: url('../images/gifts-image.svg');
+  background-repeat: no-repeat;
+  background-position-y: 1rem;
+  border: 0.0625rem solid #dedede;
+  border-radius: 1.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.section__post_buy-wrapper {
+  padding: 1rem;
+}
+
+.section__post_buy-title {
+  color: #2963a3;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: 700;
+}
+
+.section__post_buy-title span {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.section__post_buy-text {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 1rem 0;
+}
+
+.section__post_buy-price {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.buy_button {
+  width: 6.75rem;
+}
+
 @media (min-width: 48rem) {
   .main__posts {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
+
   .main__title {
     line-height: 3.5rem;
     font-size: 3rem;
