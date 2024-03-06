@@ -60,7 +60,7 @@
           <a class="bread-crumbs__link">Блог</a>
           <a class="bread-crumbs__link">Как не утонуть в тревоге и управ...</a>
         </div>
-        <main class="main" style="display: none">
+        <main class="main" >
           <h1 class="main__title">Блог</h1>
           <ul class="main__filters">
             <li>
@@ -367,7 +367,7 @@
             </div>
           </div>
         </main>
-        <section class="section__post">
+        <section class="section__post" style="display: none">
           <div class="section__post_container">
             <article class="section__post_article-text">
               <h2 class="section__post_title">
@@ -619,6 +619,15 @@
                     вновь привести себя в спокойное состояние через расслабление
                   </p>
                 </div>
+
+                <div class="section__post_links">
+                  <a href="#">Self</a>
+                  <a href="#">Самооценка и самопринятие</a>
+                  <a href="#">Самооценка и самопринятие</a>
+                  <a href="#">Упражнения</a><a href="#">Чувства и эмоции</a>
+                  <a href="#">Самооценка и самопринятие</a>
+                  <a href="#">Тревога</a>
+                </div>
               </div>
             </article>
 
@@ -645,6 +654,14 @@
                 </div>
 
                 <div class="section__post__psychologists">
+                  <div class="section__post__psychologists-label-container">
+                    <span class="section__post__psychologists-label">
+                      Переписка
+                    </span>
+                    <span class="section__post__psychologists-label-video">
+                      Видео
+                    </span>
+                  </div>
                   <img
                     class="section__post__psychologists-photo"
                     src="./images/psy-photo.png"
@@ -709,6 +726,12 @@
                   alt="Промо - дарите заботу"
                 />
 
+                <img
+                  class="section__post_promo-desktop"
+                  src="./images/gifts-desktop.svg"
+                  alt="Промо - дарите заботу"
+                />
+
                 <div class="section__post_buy">
                   <div class="section__post_buy-wrapper">
                     <h3 class="section__post_buy-title">
@@ -729,8 +752,33 @@
           </div>
         </section>
       </div>
+      <div class="section__post_choose-psychologist-wrapper"  style="display: none">
+        <div class="section__post_choose-psychologist">
+          <div>
+            <h2 class="section__post_choose-psychologist-title">
+              Откликается <br />
+              проблема?
+            </h2>
+            <p class="section__post_choose-psychologist-text">
+              Поможем подобрать специалиста по работе с подобным запросом
+            </p>
+            <button
+              class="section__post_learn-more-button choose-psychologist-button"
+            >
+              Подобрать психолога
+            </button>
+          </div>
+          <div>
+            <img
+              class="section__post_choose-psychologist-image"
+              src="./images/talking-people.png"
+              alt="картинка с людьми"
+            />
+          </div>
+        </div>
+        <div class="section__post_choose-psychologist-background"></div>
+      </div>
     </div>
-
     <footer class="footer">
       <nav>
         <ul class="footer__menu">
