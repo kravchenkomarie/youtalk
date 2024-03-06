@@ -183,21 +183,18 @@ body {
   padding: 1rem;
 }
 
-@media (min-width: 25.88rem) {
-  .wrapper {
-    padding: 1.25rem;
-  }
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .bread-crumbs {
-  color: rgba(0, 0, 0, 0.7);
   font-size: 0.75rem;
   padding-top: 1rem;
+}
+
+.bread-crumbs__link {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .bread-crumbs__link:first-child {
@@ -205,8 +202,8 @@ body {
   position: relative;
 }
 
-.bread-crumbs__link {
-  margin-left: 0.9rem;
+.bread-crumbs__link:not(:first-child) {
+  margin-left: 0.8rem;
 }
 
 .bread-crumbs__link:first-child::after {
@@ -229,14 +226,8 @@ body {
   width: 1rem;
   height: 1rem;
   position: absolute;
-  left: 8.7rem;
-  top: 8.1rem;
-}
-
-@media (min-width: 25.88rem) {
-  .bread-crumbs {
-    padding-top: 1.25rem;
-  }
+  left: 7.4rem;
+  top: 5.6rem;
 }
 
 .main__title {
@@ -244,14 +235,6 @@ body {
   font-weight: 700;
   line-height: 2rem;
   margin-top: 1.5rem;
-}
-
-@media (min-width: 25.88rem) {
-  .main__title {
-    line-height: 2.5rem;
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
 }
 
 .main__filters {
@@ -262,12 +245,6 @@ body {
   white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-@media (min-width: 25.88rem) {
-  .main__filters {
-    margin-bottom: 1rem;
-  }
 }
 
 .main__filters::-webkit-scrollbar {
@@ -352,15 +329,6 @@ body {
 
 .main__posts_post-content {
   padding: 1rem;
-}
-
-@media (min-width: 25.85rem) {
-  .main__posts_post-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 16rem;
-  }
 }
 
 .main__posts_button-container {
@@ -514,36 +482,6 @@ body {
   display: none;
 }
 
-@media (min-width: 25.85rem) {
-  .footer__newsletter {
-    height: 3.25rem;
-  }
-
-  .footer__input_container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .footer__input_button {
-    background-color: #16c8bb;
-    display: block;
-    padding: 0.8rem 0.7rem 0.8rem 1.437rem;
-    border-radius: 0.25rem;
-    position: absolute;
-    right: 0;
-    top: 5.17rem;
-  }
-
-  .footer__contacts {
-    grid-template-columns: repeat(7, 1fr);
-  }
-
-  .footer__input_button {
-    top: 0;
-  }
-}
-
 .section__post {
   margin-top: 2rem;
 }
@@ -670,12 +608,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.section__post_third-image {
+.section__post_third-image,
+.section__post_third-image-hands {
   margin: 1rem 0;
 }
 
 .section__post_exercise {
   background-color: #fefaec;
+  border-radius: 1rem;
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -698,6 +638,7 @@ body {
 .section__post_girl-image {
   height: 14.68rem;
   margin-bottom: 0.5rem;
+  width: 100%;
 }
 
 .section__post_image-container {
@@ -724,7 +665,8 @@ body {
 }
 
 .learn-more-title {
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 1.5rem auto 0.5rem auto;
+  max-width: 18rem;
 }
 
 .section__post__learn-more-text {
@@ -828,6 +770,11 @@ body {
 
 .section__post_promo {
   margin: 1.5rem 0;
+  width: 100%;
+}
+
+.section__post_promo-mobile {
+  display: none;
 }
 
 .section__post_buy {
@@ -869,6 +816,126 @@ body {
 
 .buy_button {
   width: 6.75rem;
+}
+
+.section__post_third-image-mobile {
+  display: none;
+}
+
+.section__post_promo-tablet {
+  display: none;
+}
+
+.section__post_promo-laptop {
+  display: none;
+}
+
+@media (min-width: 25.87rem) {
+  .wrapper {
+    padding: 1.25rem;
+  }
+  .bread-crumbs {
+    padding-top: 1.25rem;
+  }
+  .main__title {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .main__filters {
+    margin-bottom: 1rem;
+  }
+  .main__posts_post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 16rem;
+  }
+
+  .footer__newsletter {
+    height: 3.25rem;
+  }
+
+  .footer__input_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .footer__input_button {
+    background-color: #16c8bb;
+    display: block;
+    padding: 0.8rem 0.7rem 0.8rem 1.437rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    right: 0;
+    top: 5.17rem;
+  }
+
+  .footer__contacts {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .bread-crumbs__link:nth-child(2)::after {
+    top: 6.6rem;
+  }
+
+  .section__post_image {
+    height: 12.9rem;
+    width: 100%;
+  }
+
+  .section__post_article-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .section__post_second-image {
+    height: 12.9rem;
+    width: 100%;
+  }
+
+  .section__post_third-image {
+    display: none;
+  }
+
+  .section__post_third-image-mobile {
+    display: block;
+    height: 23.75rem;
+    margin: 1rem 0;
+  }
+
+  .section__post_chair-image,
+  .section__post_girl-image {
+    margin-bottom: 1rem;
+  }
+
+  .third-exercise {
+    margin-bottom: 3.5rem;
+  }
+
+  .section__post_learn-more {
+    padding: 1.5rem 2rem 2.75rem 2rem;
+  }
+
+  .section__post__psychologists {
+    padding: 1.5rem 3.875rem 2.25rem 3.875rem;
+  }
+
+  .section__post_promo {
+    display: none;
+  }
+
+  .section__post_promo-mobile {
+    display: block;
+    margin: 1.5rem 0;
+  }
+
+  .section__post_buy {
+    background-position-x: 5rem;
+    background-position-y: -0.5rem;
+    margin-bottom: 7.9375rem;
+  }
 }
 
 @media (min-width: 48rem) {
@@ -975,8 +1042,107 @@ body {
   }
 
   .footer__other_info {
-    grid-template-columns: 2fr repeat(2, 2.5fr) 3fr;
+    grid-template-columns: 3fr repeat(2, 4fr) 2fr;
     width: 100%;
+  }
+
+  .section__post_title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section__post_image {
+    height: 20.68rem;
+  }
+
+  .section__post_second-image {
+    height: 20.68rem;
+  }
+
+  .section__post_quote-container {
+    width: 100%;
+  }
+
+  .section__post_second-quote {
+    display: block;
+    height: 10.5rem;
+    margin: 0 auto 1.5rem auto;
+    padding-top: 2rem;
+    width: 30.3rem;
+  }
+
+  .section__post_third-image-mobile {
+    display: none;
+  }
+
+  .section__post_article-text-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .section__post_third-image,
+  .section__post_third-image-hands {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+
+  .article-near-picture {
+    display: inline-block;
+    max-width: 25.5rem;
+  }
+
+  .section__post_third-image-hands {
+    width: 18.37rem;
+  }
+
+  .section__post_exercise {
+    padding: 1.5rem;
+  }
+
+  .section__post_articles-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section__post_learn-more {
+    width: 22.25rem;
+  }
+
+  .third-exercise {
+    margin-bottom: 1.5rem;
+  }
+
+  .section__post_learn-more {
+    padding-bottom: 2.25rem;
+  }
+
+  .section__post_promo-mobile {
+    display: none;
+  }
+
+  .section__post_promo-tablet {
+    display: block;
+    margin-bottom: 3.68rem;
+  }
+
+  .section__post_buy-wrapper {
+    padding: 0.7rem 2.62rem 0.25rem 1.34rem;
+  }
+
+  .gifts-container {
+    height: 15.5rem;
+    margin-bottom: 3.68rem;
+  }
+
+  .section__post_article-title {
+    margin-bottom: 1rem;
+  }
+
+  .second-exercise {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1014,10 +1180,106 @@ body {
   .footer {
     padding: 2.5rem 1.625rem 1.0625rem 1.75rem;
   }
+
+  .section__post_article-text {
+    max-width: 43.7rem;
+  }
+
+  .section__post_container {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .section__post_learn-more,
+  .section__post__psychologists {
+    max-width: 13.87rem;
+  }
+
+  .section__post_promo-tablet {
+    display: none;
+  }
+
+  .section__post_promo-laptop {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  .learn-more-title {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  .section__post_learn-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .section__post__learn-more-text {
+    text-align: center;
+    width: 11rem;
+  }
+
+  .section__post__psychologists {
+    padding: 1.5rem;
+  }
+
+  .section__post__psychologists_title::before {
+    bottom: 4rem;
+  }
+
+  .psychologists_button {
+    margin-top: 0.5rem;
+  }
+
+  .section__post_buy-wrapper {
+    padding: 1.5rem;
+  }
+
+  .section__post_buy {
+    background-position-x: 0rem;
+    background-position-y: 1.5rem;
+  }
+
+  .article-near-picture {
+    max-width: 24rem;
+  }
+
+  .section__post_articles-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .third-exercise {
+    margin-bottom: 4.43rem;
+  }
+
+  .right-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section__post_promo-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__post_promo-laptop {
+    height: 18.25rem;
+    width: 13.87rem;
+  }
+
+  .section__post_buy-wrapper {
+    width: 13.87rem;
+  }
 }
 
 @media (min-width: 90rem) {
-  .wrapper {
+  .main__bg_wrapper {
     background-image: url('../images/background.png');
     background-repeat: no-repeat;
     background-position: 0% 30%;
@@ -1064,5 +1326,37 @@ body {
 
   .footer__other_info {
     grid-template-columns: 1.7fr 2fr 2fr 4fr;
+  }
+
+  .section__post_wrapper {
+    background-image: url('../images/bg-post.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 52%;
+  }
+
+  .section__post_container {
+    justify-content: space-between;
+  }
+
+  .section__post__psychologists,
+  .section__post_learn-more {
+    max-width: 17.625rem;
+  }
+
+  .section__post_article-text {
+    width: 43.18rem;
+  }
+
+  .section__post__psychologists_title::before {
+    bottom: 2.5rem;
+  }
+
+  .section__post_buy-wrapper {
+    width: 17.625rem;
+  }
+
+  .section__post_promo-laptop {
+    height: 18.25rem;
+    width: 17.87rem;
   }
 }
